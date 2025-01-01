@@ -1,0 +1,122 @@
+body {
+    background-color: #373737;
+    color: #DCDCDC;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.headline {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+.profile-picture {
+    width: 20%;
+    margin: 1em auto;
+}
+
+.about-me, .projects, .contact {
+    margin: 2em 0;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.project img {    
+    width: 75px;
+    height: 100px;
+    margin-bottom: 0.5em;
+}
+
+
+/* Skills */
+.skill-category {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.skill-category h3 {
+    font-size: 1.5em;
+    color: #DCDCDC;
+    margin-bottom: 1em;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.row-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.skill {
+    position: relative;
+    background-color: #4E4E4E;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+.skill img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 0.5em;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    z-index: 10; /* Skill gets highlighted */
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #DCDCDC;
+    color: #373737;
+    padding: 0.5em;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 100; /* Tooltip has the highest z-index */
+    font-size: 0.8em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.skill:hover .tooltip {
+    display: block;
+}
+
+
+/* Links */
+a {
+    color: #878787;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A9A9A9;
+}
