@@ -57,13 +57,6 @@ body {
     margin-bottom: 1em;
 }
 
-.project-logo img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    filter: brightness(2);
-}
-
 .project-links .disabled-link {
     background-color: rgba(255,255,255,0.08);
     color: #9ca3af;
@@ -232,10 +225,6 @@ a:hover {
 }
 
 /* Sections */
-.section {
-    padding: 4em 0;
-}
-
 .section > * {
     max-width: 900px;
     margin-left: auto;
@@ -243,6 +232,7 @@ a:hover {
 }
 
 .section {
+    padding: 4em 0;
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s ease;
