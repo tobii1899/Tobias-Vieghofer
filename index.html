@@ -7,41 +7,117 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">    
-        <p class="headline">Hi, I am Tobias Vieghofer - Software Developer and student at HTL Leonding</p>
-        <p>I’m passionate about modern, scalable software solutions and always eager to learn and take on new challenges</p>
-        <img src="pictures/TobiasVieghofer.png" alt="Tobias Vieghofer" class="profile-picture">
-    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="about-me">
-        <h2>About me</h2>
-        <p>
-            I am a 4th-year Computer Science student at HTL Leonding 
-            and haven't had any problems passing school so far. 
-            I really enjoy working on projects and love seeing the progress. I am very committed and motivated in what I do. 
-            Besides school, I also do strength training and play soccer.
-            In addition to school, I'm trying to gain my first insights into the world of work for my later life. 
-            I completed summer internships at 'Öbb' and 'jobs.at'. 
-            I'm currently trying to earn more experience through freelancing.
-        </p>
+    <section id="about" class="section">
+        <div class="header">    
+            <p class="headline">Hi, I am Tobias Vieghofer - Software Developer and student at HTL Leonding</p>
+            <p>I’m passionate about modern, scalable software solutions and always eager to learn and take on new challenges</p>
+            <img src="pictures/TobiasVieghofer.png" alt="Tobias Vieghofer" class="profile-picture">
+        </div>
+
+        <div class="about-me">
+            <h2>About me</h2>
+            <p>
+                I am a 5th-year Computer Science student at HTL Leonding with a strong interest in software development. I enjoy working on projects and value seeing continuous progress, which motivates me to stay committed and focused in what I do. Alongside school, I engage in strength training and play soccer, which helps me maintain a balanced lifestyle.
+                In addition to my studies, I aim to gain early insights into the professional world. I have completed summer internships at ÖBB and jobs.at and wrote my diploma thesis in cooperation with KPMG. I will describe this project in more detail below and add it to this portfolio once I have finished school. Currently, I am further expanding my experience through freelancing.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="section"> 
+        <h1>Skills</h1>
         <div class="skills"></div>
-
-    </div>
-
+    </section>
     <script src="skills.js"></script>
 
-    <div class="projects">
+    <section id="projects" class="section projects">
         <h2>Projects</h2>
-        <a class="project" href="https://github.com/SYP-AHIF-2024-25-26/SimTune/tree/main" target="_blank">
-            <img src="pictures/simtune-logo.png" alt="SimTune">
-            <p><b>SimTune</b><br>Here you learn for your transition exam in various instruments (not yet finished)</p>
-        </a>
-    </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="pictures/simtune-logo.png" alt="SimTune" class="project-logo">
 
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:tobias.vieghofer@gmail.com">tobias.vieghofer@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/tobii1899" target="_blank">tobii1899</a></p>
-    </div>
+                <h3>SimTune</h3>
+
+                <p class="project-description">
+                    SimTune is a learning platform designed to help students prepare for their music transition exams. It offers structured practice exercises as well as realistic exam simulations, allowing users to train under conditions similar to the actual examination.<br>      
+                    The project is currently still under development.
+                </p>
+
+                <div class="project-links">
+                    <a href="https://github.com/SYP-AHIF-2024-25-26/SimTune/tree/main" target="_blank">
+                        GitHub
+                    </a>
+                    <a href="https://if210019.cloud.htl-leonding.ac.at" target="_blank">
+                        Website
+                    </a>
+                </div>      
+            </div>
+
+            <div class="project-card">
+                <img src="pictures/kpmg.png" alt="SimTune" class="project-logo">
+
+                <h3>Diploma Thesis – Synthetic Data Generation for AI Training</h3>
+
+                <p class="project-description">
+                    I wrote my diploma thesis in cooperation with KPMG. The project was structured into two teams: an Analysis team and a Synthesis team. Together with a fellow student, I was part of the Analysis team. Our task was to analyze real datasets provided by KPMG, as their AI models could not be trained directly on sensitive real data. Based on the results of our analysis, synthetic datasets were generated, which can then be used safely for training artificial intelligence systems.
+                </p>
+
+                <div class="project-links">
+                    <a class="disabled-link">
+                        In progress – details coming soon.
+                    </a>
+                </div>      
+            </div>
+
+            <div class="project-card">
+                <img src="pictures/habit-tracker.png" alt="SimTune" class="project-logo">
+
+                <h3>Habit Tracker</h3>
+
+                <p class="project-description">
+                    A simple habit tracker developed as a personal project for my girlfriend. While development was stopped early due to shifting focus to other projects, the core habit-tracking functionality works reliably and is actively used.
+                </p>
+
+                <div class="project-links">
+                    <a href="https://habit-tracker-d8977.web.app/landing" target="_blank">
+                        Website
+                    </a>
+                </div>      
+            </div>
+
+            <div class="project-card">
+                <img  alt="No logo yet" class="project-logo">
+
+                <h3>Cognitiva AI</h3>
+
+                <p class="project-description">
+                    Cognitiva AI is a non-medical software project aimed at supporting elderly care facilities by tracking cognitive changes over time. The system uses cognitive exercises to observe potential improvements or declines in cognitive performance. Based on user interaction and exercise results, progression is tracked in the background. In the future, AI-based analysis and recommendations (such as adjusting exercise intensity) are planned, although advanced AI integration is not yet part of the project.
+                </p>
+
+                <div class="project-links">
+                    <a class="disabled-link">
+                        In progress – details coming soon.
+                    </a>
+                </div>      
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:tobias.vieghofer@gmail.com">tobias.vieghofer@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/tobii1899" target="_blank">tobii1899</a></p>
+        </div>
+    </section>
+    <script src="scroll.js"></script>
 </body>
 </html>

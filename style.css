@@ -1,9 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #373737;
-    color: #DCDCDC;
+    background-color: #1e1e1e;
+    color: #e5e7eb;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,89 +32,163 @@ body {
     text-align: center;
 }
 
-.project {
+/*Projects*/
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: linear-gradient(180deg, #2f2f2f, #262626);
+    border-radius: 20px;
+    padding: 2em;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    text-align: left;
+}
+
+.project-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    margin-bottom: 1em;
+}
+
+.project-logo img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(2);
+}
+
+.project-links .disabled-link {
+    background-color: rgba(255,255,255,0.08);
+    color: #9ca3af;
+    cursor: not-allowed;
+    pointer-events: none;
+    border: 1px dashed rgba(255,255,255,0.15);
+}
+
+.project-card h3 {
+    margin: 0 0 0.6em 0;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+
+.project-description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 1.4em;
+}
+.project-links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
+    gap: 1em;
 }
 
-.project img {    
-    width: 75px;
-    height: 100px;
-    margin-bottom: 0.5em;
+.project-links a {
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    background-color: rgba(56,189,248,0.15);
+    color: #38bdf8;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
 }
 
+.project-links a:hover {
+    background-color: rgba(56,189,248,0.25);
+}
 
 /* Skills */
 .skill-category {
-    margin: 2em 0;
+    margin: 4em 0;
     text-align: center;
 }
 
 .skill-category h3 {
-    font-size: 1.5em;
-    color: #DCDCDC;
-    margin-bottom: 1em;
+    font-size: 1.8em;
+    margin-bottom: 2em;
+    color: #ffffff;
 }
 
-.skills-grid {
-    display: flex;
+.skill-icon.light-icon {
+    background: #ffffff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    align-items: center;
     justify-content: center;
-    gap: 1em;
-    flex-wrap: wrap;
-    flex-direction: row;
-    max-width: 800px;
+    margin: 0 auto 1em auto;
+    overflow: hidden;
+}
+
+/* Card Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5em;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.row-break {
-    flex-basis: 100%;
-    height: 0;
+/* Card */
+.skill {
+    background: linear-gradient(
+        180deg,
+        #2f2f2f 0%,
+        #262626 100%
+    );
+    color: #f8fafc;
+    border-radius: 18px;
+    padding: 1.8em 1.6em;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-.skill {
-    position: relative;
-    background-color: #4E4E4E;
-    padding: 1em;
-    border-radius: 10px;
-    text-align: center;
-    width: 100px;
-    transition: transform 0.2s ease;
-    z-index: 1;
+/* Optional: dezenter Hover */
+.skill:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
 }
 
 .skill img {
-    width: 75px;
-    height: 75px;
-    margin-bottom: 0.5em;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(56,189,248,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1em auto;
+    overflow: hidden;
 }
 
-.skill:hover {
-    transform: scale(1.1);
-    z-index: 10; /* Skill gets highlighted */
+.skill p {
+    color: #ffffff;
+    font-size: 1.05em;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+    text-align: center;
 }
 
+/* Description immer sichtbar */
 .tooltip {
-    display: none;
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #DCDCDC;
-    color: #373737;
-    padding: 0.5em;
-    border-radius: 5px;
-    white-space: nowrap;
-    z-index: 100; /* Tooltip has the highest z-index */
-    font-size: 0.8em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.skill:hover .tooltip {
     display: block;
+    position: static;
+    background: none;
+    color: #cbd5e1;
+    padding: 0;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    line-height: 1.4;
+    box-shadow: none;
+    transform: none;
+    white-space: normal;
 }
-
 
 /* Links */
 a {
@@ -119,4 +198,117 @@ a {
 
 a:hover {
     color: #A9A9A9;
+}
+
+
+/*scroll*/
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 1em 0;
+}
+
+.navbar a {
+    color: #e5e7eb;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+/* Sections */
+.section {
+    padding: 4em 0;
+}
+
+.section > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+    body {
+        padding-top: 64px;
+        text-align: center;
+    }
+
+    .headline {
+        font-size: 1.4em;
+        padding: 0 1em;
+    }
+
+    p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .profile-picture {
+        width: 60%;
+        max-width: 220px;
+    }
+
+    .section {
+        padding: 2.5em 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2em;
+        padding: 0 1em;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill {
+        padding: 1.4em 1.2em;
+    }
+
+    .skill img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar ul {
+        gap: 1.2em;
+        font-size: 0.9em;
+    }
+
+    .project-card {
+        padding: 1.6em;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.6em;
+    }
 }
