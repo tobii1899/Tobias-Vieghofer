@@ -8,7 +8,10 @@ const observer = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.15 }
+    {
+        threshold: 0.01,
+        rootMargin: "0px 0px -50px 0px"
+    }
 );
 
 sections.forEach(section => observer.observe(section));
