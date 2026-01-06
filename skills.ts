@@ -15,7 +15,7 @@ const skillCategories: SkillCategory[] = [
         skills: [
             { image: "html-logo.png", name: "HTML", description: "I'm very good at HTML because I've been doing it for 4 years" },
             { image: "css-logo.png", name: "CSS", description: "I have also been using CSS for 4 years and am therefore very good" },
-            { image: "js-logo.png", name: "JavaScript", description: "I actually only converted javascript (with tsc from typescript), but it is very similar to js so I can do it really well" },
+            { image: "js-logo.png", name: "JavaScript", description: "I actually only converted javascript (with tsc from typescript), but it is very similar to ts so I can do it really well" },
             { image: "ts-logo.png", name: "TypeScript", description: "I'm also very good at typescript because we've used it for several years" },
             { image: "tailwind-logo.png", name: "Tailwind", description: "I've only been using Tailwind for a short time and I'm actually very good with it (my project SimTune uses tailwind)" },
         ],
